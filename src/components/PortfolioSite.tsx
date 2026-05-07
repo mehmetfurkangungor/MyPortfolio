@@ -442,6 +442,20 @@ export default function PortfolioSite() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-5 px-5 py-24 md:grid-cols-2 md:px-8">
+        <article className="rounded-[2rem] border border-white/10 bg-[#0c0c0e] p-7 md:p-9 md:col-span-2">
+          <Sparkles className="mb-8 h-7 w-7 text-cyan-300" />
+          <h2 className="text-3xl font-semibold tracking-tight text-white">
+            Yapay Zeka Destekli Web ve Dijital Ürün Geliştirme
+          </h2>
+          <p className="mt-5 max-w-4xl leading-8 text-zinc-400">
+            Son dönemlerde OpenAI Codex, Google Antigravity, Open Cloud ve
+            benzeri yapay zeka destekli agent araçları üzerine kendimi
+            geliştiriyorum. Bu araçlarla web sitesi, uygulama prototipi ve
+            dijital ürün fikirleri geliştirmeye çalışıyorum. Amacım; içerik
+            üretimi ve sosyal medya bilgimi, yapay zeka destekli web ve
+            uygulama geliştirme becerileriyle birleştirmek.
+          </p>
+        </article>
         <article className="rounded-[2rem] border border-white/10 bg-[#0c0c0e] p-7 md:p-9">
           <Target className="mb-8 h-7 w-7 text-cyan-300" />
           <h2 className="text-3xl font-semibold tracking-tight text-white">Meta ve Reklam Bilgim</h2>
