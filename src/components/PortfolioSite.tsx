@@ -12,10 +12,14 @@ import {
 } from "./portfolio/KnowledgeSections";
 import { PortfolioGrid } from "./portfolio/PortfolioGrid";
 import { ServicesSection } from "./portfolio/ServicesSection";
+import { CinematicIntro } from "./motion/CinematicIntro";
+import { SmoothScroll } from "./motion/SmoothScroll";
 
 export default function PortfolioSite() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050506] text-zinc-100">
+      <SmoothScroll />
+      <CinematicIntro />
       <Header />
       <HeroSection />
       <AboutSection />

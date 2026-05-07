@@ -1,3 +1,5 @@
+import { Reveal } from "../motion/Reveal";
+
 export function SectionHeading({
   eyebrow,
   title,
@@ -8,7 +10,7 @@ export function SectionHeading({
   text?: string;
 }) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
+    <Reveal className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.26em] text-cyan-300">
         {eyebrow}
       </p>
@@ -20,6 +22,6 @@ export function SectionHeading({
           {text}
         </p>
       ) : null}
-    </div>
+    </Reveal>
   );
 }

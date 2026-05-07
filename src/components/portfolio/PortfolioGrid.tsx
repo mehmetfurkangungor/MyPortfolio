@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { portfolioCategories, projects } from "@/data/portfolioData";
 import { MediaSlot } from "./MediaSlot";
@@ -46,12 +47,26 @@ export function PortfolioGrid() {
       </div>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {filteredProjects.map((project) => (
-          <article
+          <motion.article
             key={project.title}
-            className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0c0c0e] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/45"
+            initial={{ opacity: 0, y: 34, filter: "blur(12px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -8, scale: 1.015 }}
+            className="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0c0c0e] transition-colors duration-300 hover:border-cyan-300/45"
           >
-            <div className="aspect-video border-b border-white/10">
+            <div className="relative aspect-video overflow-hidden border-b border-white/10">
               <MediaSlot project={project} />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-t from-black/90 via-cyan-950/35 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.35 }}
+              />
+              <div className="absolute bottom-4 left-4 flex translate-y-6 items-center gap-2 rounded-full border border-white/15 bg-black/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white opacity-0 backdrop-blur transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                Preview Reel
+                <ExternalLink className="h-3.5 w-3.5 text-cyan-200" />
+              </div>
             </div>
             <div className="p-6">
               <div className="mb-4 flex items-center justify-between gap-3">
@@ -89,7 +104,7 @@ export function PortfolioGrid() {
                 <ExternalLink className="h-4 w-4" />
               </a>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </section>
