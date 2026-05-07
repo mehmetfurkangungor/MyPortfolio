@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ),
-  title: "Video Prodüksiyon ve Dijital İçerik Portfolyosu",
+  title: "Mehmet Furkan Güngör | Video Prodüksiyon ve Dijital İçerik",
   description:
-    "Video çekimi, kurgu, sosyal medya yönetimi, Meta reklam kampanyaları ve belgesel projeleri odaklı kişisel portfolyo.",
+    "Mehmet Furkan Güngör'ün video prodüksiyon, kurgu, sosyal medya yönetimi, Meta reklam bilgisi, e-ticaret içerikleri ve belgesel projeleri portfolyosu.",
   openGraph: {
-    title: "Video Prodüksiyon ve Dijital İçerik Portfolyosu",
+    title: "Mehmet Furkan Güngör | Video Prodüksiyon ve Dijital İçerik",
     description:
-      "Yeni Medya ve İletişim öğrencisi için sinematik, profesyonel ve sade portfolyo sitesi.",
+      "Yeni Medya ve İletişim öğrencisi Mehmet Furkan Güngör için sinematik, profesyonel ve sade portfolyo sitesi.",
     type: "website",
     locale: "tr_TR",
     images: [
