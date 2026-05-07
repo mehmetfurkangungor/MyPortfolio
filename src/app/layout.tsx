@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     images: [
       {
-        url: "/images/hero-production.png",
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero-production.png`,
         width: 1536,
         height: 864,
         alt: "Video prodüksiyon portfolyosu hero görseli",

@@ -165,6 +165,7 @@ function MediaSlot({ project }: { project: Project }) {
 
 export default function PortfolioSite() {
   const [activeCategory, setActiveCategory] = useState("Tüm İşler");
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   const filteredProjects = useMemo(() => {
     if (activeCategory === "Tüm İşler") return projects;
@@ -202,7 +203,7 @@ export default function PortfolioSite() {
       <section id="top" className="relative min-h-screen overflow-hidden pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-55"
-          style={{ backgroundImage: "url('/images/hero-production.png')" }}
+          style={{ backgroundImage: `url('${basePath}/images/hero-production.png')` }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#050506_0%,rgba(5,5,6,0.88)_35%,rgba(5,5,6,0.35)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#050506] to-transparent" />
